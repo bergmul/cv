@@ -42,17 +42,17 @@
 \RequirePackage{xstring}
 
 \RequirePackage{graphicx}          % Stretch text
-\RequirePackage{fontawesome}
+%\RequirePackage{fontawesome}
 \RequirePackage{ifpdf}
 
 
 % Resume Modules
-\RequirePackage{modules/skills}
-\RequirePackage{modules/contact}
-\RequirePackage{modules/links}
-\RequirePackage{modules/references}
-\RequirePackage{modules/entities}
-\RequirePackage{modules/coverletter}
+\RequirePackage{../modules/skills}
+\RequirePackage{../modules/contact}
+\RequirePackage{../modules/links}
+\RequirePackage{../modules/references}
+\RequirePackage{../modules/entities}
+\RequirePackage{../modules/coverletter}
 
 
 \RequirePackage[hidelinks,unicode]{hyperref}
@@ -177,7 +177,7 @@
   Extension=.ttf
 ]
 
-\newfontfamily\textfont{Ubuntu}[
+\newfontfamily\resumetextfont{OpenSans}[
   UprightFont=*-Regular,
   ItalicFont=*-Italic,
   BoldFont=*-Bold,

@@ -14,7 +14,7 @@
 
 \newcommand*{\jobtitle}{\@lettertitle}
 
-\newcommand{\profilestyle}{\fontsize{9pt}{1em}\textfont\color{grey}}
+\newcommand{\profilestyle}{\fontsize{9pt}{1em}\resumetextfont\color{grey}}
 \newcommand{\coverletterstyle}{\fontsize{9pt}{1em}\letterfont\color{grey}}
 
 \DeclareDocumentEnvironment{coverletter}{O {} O {coverletter}}
@@ -58,6 +58,6 @@
     \@letterclosing
 
 	\vspace*{.5em}
-    \textfont\textbf{\@firstname \space \@lastname}
+    \resumetextfont\textbf{\@firstname \space \@lastname}
   }
 \endinput
