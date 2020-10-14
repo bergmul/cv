@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same
+% directory as this .tex file. These files provide the resume style and themes
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{geometry} % Reduce document margins
+
+\geometry{a4paper, top=5mm, left=20mm, right=20mm, bottom=15mm}
+
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Ulrich} % Your first name
+\familyname{Bergmann} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{Feilengasse 3}{8008 Z\"urich}
+%\mobile{(000) 111 1111}
+\phone{+41 77 904 03 07}
+%\fax{(000) 111 1113}
+\email{ulrich.bergmann@econ.uzh.ch}
+%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+\photo[120pt][0pt]{bild.jpg} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\cventry{Since 2015}{University of Z\"urich}{}{Ph.D. Economics}{}{Supervisor: Ernst Fehr}
+\cventry{2014}{D\"usseldorf Institute for Competition Economics}{}{}{Ph.D. Economics}{Transfer to Z\"urich in 2015}
+\cventry{2012}{University of Bonn}{}{M.Sc. Economics}{}{}
+%Focus on Microeconomic Theory (Game Theory, Mechanism Design) and Applied Microeconomics (Behavioral Economics)}  % Arguments not required can be left empty
+\cventry{2007}{University of Bayreuth}{}{B.A. Philosophy \& Economics}{}{}% \\ Focus on Game Theory \& Logics (theory) and Negotiations \& IO (applied)}
+\cventry{2009 - 2010}{University of Barcelona}{}{Studies abroad}{}{}
+%{Classes on Logics and the History of Scientific Thought}
+
+\section{Experience}
+\cventry{2012}{Daimler AG}{Working student}{Raw material procurement}{}{2 months, Statistical analysis.}
+\cventry{2011}{Daimler AG}{Internship}{Strategic procurement}{}{6 months, Auction design.}
+
+%\cventry{2004 -- 2007}{Abitur}{Walram Gymnasium Menden}{}{}{Major in Mathematics \& Physics}
+%\cventry{1998 -- 2004}{FOS mit Qualifikation}{St\"adt. Realschule Lendringsen}{GPA: 1.5}{}{}
+%\section{Masters Thesis}
+
+\section{Institutional Responsibilities}
+\cventry{Since 2017}{PhD Representative on Faculty and Department Level}{}{}{}{}
+\cventry{Since 2015}{Cohort Representative in the Z\"urich GSE Development Comitee}{}{}{}{}
+
+\section{Teaching}
+\cventry{Z\"urich}{Advanced Microeconomics I (Master)}{TA}{}{}{Winter 2016 \& 2017}
+\cventry{}{Advanced Microeconomics II (Master)}{TA}{}{}{Summer 2017}
+\cventry{Bonn}{Microeconomics (Bachelor)}{TA}{}{}{Winter 2012, 2013 \& Summer 2014}
+\cventry{Bayreuth}{Microeconomics (Bachelor)}{TA}{}{}{Winter 2008 \& 2010}
+\cventry{}{Scientific writing (Bachelor)}{TA}{}{}{Summer 2009}
+\newpage \ \\ \ \\
+\section{Commitees}
+\cventry{2018}{Member of the Promotion Comitee for the Full Professorship of Michel Marechal}{}{}{}{}
+\cventry{2017}{Member of the Hiring Comitee for Nir Jaimovich}{}{}{}{}
+
+\section{Organization of Conferences}
+\cventry{2008}{Organization of 'Bayreuther Dialoge' Conference}{}{}{}{}
+
+\section{Awards \& Fellowships}
+\cventry{2014}{PhD fellowship (3 years)}{German Research Foundation}{}{DFG GRK 1974}{}
+\cventry{2014}{Best Teacher Award}{University of Bonn}{}{}{}
+\cventry{2013}{Best Teacher Award}{University of Bonn}{}{}{}
+\cventry{2009}{Erasmus Scholarship}{University of Bayreuth}{}{}{}
+
+
+\section{Skills}
+\subsection{Languages}
+\cvitemwithcomment{German}{Native}{}
+\cvitemwithcomment{English}{Fluent}{}
+\cvitemwithcomment{Spanish}{Conversation}{}
+\subsection{Software}
+\cvitemwithcomment{Scientific}{\LaTeX, Mathematica, Python, R, Stata, MATLAB, Snakemake}{}
+\cvitemwithcomment{General}{Windows, Apple MacOS, GIT, Unix Bash, MS Office \normalfont{(w/ VBA programming)}}{}
+
+%------------------------------------------------
+\newpage
+\ \\ \ \\
+\section{Work in Progress}
+
+\cventry{}{The Foundations of the Decoy Effect: Putting Theory to the Test}{}{joint with Ernst Fehr}{}{Modern theories which explain the decoy effect make similar predictions with very heterogenous underlying processes. We propose a precise experimental design to disentangle those theories. The project contributes experimentally to the decoy and perception and attention literature and answers the question if salience theory can be microfounded through a divisive normalization neural process. Further insights pin down the area in which the compromise effect occurs in hope for a more precise definition of it.}
+\ \\ \ \\
+\cventry{}{Nudging with Decoys}{}{}{}{In a follow-up study, I plan to employ the gained practical knowledge about the efficacy of decoys and introduce this device into the nudging literature.
+Decoys have been used for some time by firms as a marketing device to motivate consumers to purchase more expensive products. To the best of my knowledge, there is no study that investigates the usefulness of decoys to guide individuals towards making better choices in order to increase social welfare. As decoys influence choices without limiting the set of available options, they have the potential to be useful additions or alternatives to the classic menu of nudging devices like default options and framing, which has been successfully employed to increase retirement saving, tax payments, charitable giving, and the installation of housing insulation.}
+\ \\ \ \\
+\cventry{}{Self-Deception and Deception}{}{}{}{I investigate Robert Trivers' social deception hypothesis. He claims that self-deception is a tool that evolved because it is instrumental in the efficient deception of others in social settings for material gain or status. I extend Schwardmann \& van der Weele's (ReStud R\&R) experimental setup to a three-party design. This allows to apply their findings to a broader set of client-agent settings like politicians running for office, salesmen or consultancy. Furthermore, it sheds new insights in the kind of self-deception that occurs in anticipation of social deception opportunities: Do subjects deceive themselves about their own capabilities to be more successful 'salesmen' or about the quality of their 'product' in order to convince a third party? Interaction between matched and mixed gender groups allows additional insights for the gender literature -- should agents be matched with the client's gender to perform optimally?}
+\ \\ \ \\
+\cventry{}{Political Corruption}{}{}{}{While political corruption is often associated with autocratic and developing countries (Serra, 2006), the recent affairs surrounding then Korean president Park Gun-hye and François Fillon, the republican candidate to the French presidency in the 2017 election, remind us that corruption is also a problem in western and democratic societies. Is it possible that democratic institutions psychologically motivate corruption in elected politicians on an individual level? Banerjee (2016) shows that subjects engage in corruptive practices if they feel entitled to additional private gains. We show that acting socially and serving the public can trigger such a feeling of entitlement and hence create individual corruption.}
+
+
+\end{document}
