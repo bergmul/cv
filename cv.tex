@@ -23,16 +23,24 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\documentclass[11pt,a4paper,roman, utf8]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
-\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{grey} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
 \usepackage{geometry} % Reduce document margins
 
 \geometry{a4paper, top=5mm, left=20mm, right=20mm, bottom=15mm}
+
+\usepackage{fontawesome}
+
+\graphicspath{{graphics/}}
+
+
+
+
 
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
@@ -41,24 +49,34 @@
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
+% mandatory
 \firstname{Ulrich} % Your first name
 \familyname{Bergmann} % Your last name
 
-% All information in this block is optional, comment out any lines you don't need
-\title{Curriculum Vitae}
-\address{Feilengasse 3}{8008 Z\"urich}
+% optional
+% \title{Curriculum Vitae}
+\address{Feilengasse 3}{8008 Zürich}
 %\mobile{(000) 111 1111}
 \phone{+41 77 904 03 07}
 %\fax{(000) 111 1113}
-\email{ulrich.bergmann@econ.uzh.ch}
+\email{bergmann@hey.com}
 %\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 %\extrainfo{additional information}
-\photo[120pt][0pt]{bild.jpg} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\photo[120pt][0pt]{bild_cropped1.png} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %\quote{"A witty and playful quotation" - John Smith}
+
+\extrainfo{%
+  \href{https://www.linkedin.com/in/ulrich-bergmann}{\faLinkedin \ ulrich-bergmann} \\
+  \href{https://www.github.com/bergmul}{\faGithub \ \@bergmul}
+  }
+
+
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
+
+\hypersetup{breaklinks}
 
 \makecvtitle % Print the CV title
 
@@ -67,69 +85,83 @@
 %----------------------------------------------------------------------------------------
 
 \section{Education}
-\cventry{Since 2015}{University of Z\"urich}{}{Ph.D. Economics}{}{Supervisor: Ernst Fehr}
-\cventry{2014}{D\"usseldorf Institute for Competition Economics}{}{}{Ph.D. Economics}{Transfer to Z\"urich in 2015}
-\cventry{2012}{University of Bonn}{}{M.Sc. Economics}{}{}
-%Focus on Microeconomic Theory (Game Theory, Mechanism Design) and Applied Microeconomics (Behavioral Economics)}  % Arguments not required can be left empty
-\cventry{2007}{University of Bayreuth}{}{B.A. Philosophy \& Economics}{}{}% \\ Focus on Game Theory \& Logics (theory) and Negotiations \& IO (applied)}
-\cventry{2009 - 2010}{University of Barcelona}{}{Studies abroad}{}{}
+\cventry{Expected June 2021}{Ph.D Economics}{}{University of Zürich, CH}{}{Supervisor: Ernst Fehr. My research focusses on behavioral and experimental economics. Topics include the analysis of neural underpinnings of context dependent choice, the predictability of theory of mind characteristics on economic behavior and the influence of order effects on auction revenue for budget constrained bidders.}
+
+\cventry{2014}{M.Sc. Economics}{}{University of Bonn, DE}{}{Supervisor: Matthias Kräkel. My master studies were focussed on microeconomic theory (game theory, mechanism design, auction theory) and behavioral economics. In my thesis I anaylise the motivational effects of wage schemes given heterogeneously talented workers in a firm.}
+\cventry{2012}{B.A. Philosophy \& Economics}{}{University of Bayreuth, DE}{}{Supervisor: Stefan Napel. My bachelor studies were focussed on game theory, practical and theoretical models of negotiations, formal logics, and industrial organisation.}
+
+\ \\
+
+\cventry{2019 -- 2020}{Columbia University\normalfont{, NY, USA}}{}{}{Visiting Researcher}{Host: Michael Woodford.}
+\cventry{2014 -- 2015}{Düsseldorf Institute for Competition Economic\normalfont{, DE}}{}{}{Ph.D. Economics}{Supervisor: Christian Wey. Transfer to Zürich in 2015}
+\cventry{2009 -- 2010}{University of Barcelona\normalfont{, ES}}{}{Erasmus Exchange}{}{}
 %{Classes on Logics and the History of Scientific Thought}
 
 \section{Experience}
-\cventry{2012}{Daimler AG}{Working student}{Raw material procurement}{}{2 months, Statistical analysis.}
-\cventry{2011}{Daimler AG}{Internship}{Strategic procurement}{}{6 months, Auction design.}
+\cventry{2012}{Daimler AG}{Working student}{Raw material procurement (2 months)}{}{I performed statistical analyses of the US steel market to support strategic decision making regarding future supplier relationships.}
+\cventry{2011 -- 2012}{Daimler AG}{Internship}{Strategic procurement (6 months)}{}{I developed the design of two procurement auctions used to buy the mayority of raw materials for the manufacturer's best selling car model.}
 
 %\cventry{2004 -- 2007}{Abitur}{Walram Gymnasium Menden}{}{}{Major in Mathematics \& Physics}
 %\cventry{1998 -- 2004}{FOS mit Qualifikation}{St\"adt. Realschule Lendringsen}{GPA: 1.5}{}{}
 %\section{Masters Thesis}
 
-\section{Institutional Responsibilities}
-\cventry{Since 2017}{PhD Representative on Faculty and Department Level}{}{}{}{}
-\cventry{Since 2015}{Cohort Representative in the Z\"urich GSE Development Comitee}{}{}{}{}
-
 \section{Teaching}
-\cventry{Z\"urich}{Advanced Microeconomics I (Master)}{TA}{}{}{Winter 2016 \& 2017}
-\cventry{}{Advanced Microeconomics II (Master)}{TA}{}{}{Summer 2017}
+\subsection{Programming}
+\cventry{Zürich}{Programming Practices for Economists (PhD)}{Teacher}{}{}{February 2020 \href{https://pp4rs.github.io/2020-uzh/}{\textbf{(Link)}}. Main teacher for Bash, Git, R. Support for Python, pipeline building w/ Snakemake.}
+\cventry{}{Software Carpentry}{Teacher}{}{}{February 2019 \href{https://www.crs.uzh.ch/en/training/courses.html}{\textbf{(Link)}}. Main teacher for Bash and Git at the Center for Reproducible Science \href{https://www.crs.uzh.ch/en/training/courses.html}{\textbf{(Link)}}}
+\cventry{}{Programming Practices for Economists (PhD)}{Teacher}{}{}{Summer 2018 \href{https://pp4rs.github.io/2018-uzh/}{\textbf{(Link)}}. Main Teacher for Bash, Git, Python (joint), pipeline building w/ Snakemake.}
+\subsection{Economics}
+\cventry{}{Advanced Microeconomics I \& II (Master)}{TA}{}{}{Winter 2016 \& 2017, Summer 2017}
 \cventry{Bonn}{Microeconomics (Bachelor)}{TA}{}{}{Winter 2012, 2013 \& Summer 2014}
 \cventry{Bayreuth}{Microeconomics (Bachelor)}{TA}{}{}{Winter 2008 \& 2010}
-\cventry{}{Scientific writing (Bachelor)}{TA}{}{}{Summer 2009}
-\newpage \ \\ \ \\
-\section{Commitees}
-\cventry{2018}{Member of the Promotion Comitee for the Full Professorship of Michel Marechal}{}{}{}{}
-\cventry{2017}{Member of the Hiring Comitee for Nir Jaimovich}{}{}{}{}
 
-\section{Organization of Conferences}
-\cventry{2008}{Organization of 'Bayreuther Dialoge' Conference}{}{}{}{}
+\subsection{Other}
+
+\cventry{}{Scientific writing (Bachelor)}{TA}{}{}{Summer 2009}
 
 \section{Awards \& Fellowships}
-\cventry{2014}{PhD fellowship (3 years)}{German Research Foundation}{}{DFG GRK 1974}{}
+\cventry{2019}{Exchange Fellowship}{Swiss National Science Foundation}{}{12 months}{}
+\cventry{2014}{PhD Fellowship}{German Research Foundation}{}{DFG GRK 1974, 3 years}{}
 \cventry{2014}{Best Teacher Award}{University of Bonn}{}{}{}
 \cventry{2013}{Best Teacher Award}{University of Bonn}{}{}{}
-\cventry{2009}{Erasmus Scholarship}{University of Bayreuth}{}{}{}
+\cventry{2009}{Erasmus Scholarship}{University of Bayreuth}{}{12 months}{}
 
+\section{Other Experience}
+\cventry{2017 -- 2019}{\normalfont{Ph.D Representative on Faculty and Department Level}}{}{}{}{}
+\cventry{2015 -- 2019}{\normalfont{Cohort Representative for the Development of Zürich Graduate School}}{}{}{}{}
+\cventry{2018}{\normalfont{Promotion Comitee for the Full Professorship of Prof. Dr. Michel Marechal}}{}{}{}{}
+\cventry{2017}{\normalfont{Hiring Comitee for Prof. Dr. Nir Jaimovich}}{}{}{}{}
+\cventry{2008}{\normalfont{Organization of 'Bayreuther Dialoge' Conference}}{}{}{}{}
+
+\section{Participation in Workshops, Conferences, and Summer Schools}
+
+\cventry{2018}{\normalfont{Sloan-Nomis Summer School and Workshop on the Cognitive Foundations of Economic Behavior}}{}{}{}{Vitznau \href{https://wp.nyu.edu/sloan_nomis\_project/home/events/2018-summer-school/}{\textbf{(Link)}}}
+\cventry{2018}{\normalfont{Sloan-Nmis Workshop on Attention and Choice}}{}{}{}{New York University \href{https://wp.nyu.edu/sloan\_nomis\_project/home/events/the-sloan-nomis-program-2018-workshop-on-attention-and-choice/}{\textbf{(Link)}}}
 
 \section{Skills}
+
 \subsection{Languages}
-\cvitemwithcomment{German}{Native}{}
-\cvitemwithcomment{English}{Fluent}{}
-\cvitemwithcomment{Spanish}{Conversation}{}
+\cvitemwithcomment{}{\normalfont{German (native), English (fluent), Spanish (conversational)}}{}
 \subsection{Software}
-\cvitemwithcomment{Scientific}{\LaTeX, Mathematica, Python, R, Stata, MATLAB, Snakemake}{}
-\cvitemwithcomment{General}{Windows, Apple MacOS, GIT, Unix Bash, MS Office \normalfont{(w/ VBA programming)}}{}
+\cvitemwithcomment{Scientific}{\normalfont{R, Python, Tidyverse, Numpy, Pandas, Scipy, scikit-learn, Snakemake, \LaTeX, \\ Mathematica, MATLAB, Stata}}{}
+\cvitemwithcomment{General}{\normalfont{Bash, Git, SQL, Markdown, MS Office (incl. VBA programming), MacOS, Linux, Windows}}{}
 
 %------------------------------------------------
-\newpage
-\ \\ \ \\
-\section{Work in Progress}
+% \newpage
+% \ \\ \ \\
+% \section{Work in Progress}
 
-\cventry{}{The Foundations of the Decoy Effect: Putting Theory to the Test}{}{joint with Ernst Fehr}{}{Modern theories which explain the decoy effect make similar predictions with very heterogenous underlying processes. We propose a precise experimental design to disentangle those theories. The project contributes experimentally to the decoy and perception and attention literature and answers the question if salience theory can be microfounded through a divisive normalization neural process. Further insights pin down the area in which the compromise effect occurs in hope for a more precise definition of it.}
-\ \\ \ \\
-\cventry{}{Nudging with Decoys}{}{}{}{In a follow-up study, I plan to employ the gained practical knowledge about the efficacy of decoys and introduce this device into the nudging literature.
-Decoys have been used for some time by firms as a marketing device to motivate consumers to purchase more expensive products. To the best of my knowledge, there is no study that investigates the usefulness of decoys to guide individuals towards making better choices in order to increase social welfare. As decoys influence choices without limiting the set of available options, they have the potential to be useful additions or alternatives to the classic menu of nudging devices like default options and framing, which has been successfully employed to increase retirement saving, tax payments, charitable giving, and the installation of housing insulation.}
-\ \\ \ \\
-\cventry{}{Self-Deception and Deception}{}{}{}{I investigate Robert Trivers' social deception hypothesis. He claims that self-deception is a tool that evolved because it is instrumental in the efficient deception of others in social settings for material gain or status. I extend Schwardmann \& van der Weele's (ReStud R\&R) experimental setup to a three-party design. This allows to apply their findings to a broader set of client-agent settings like politicians running for office, salesmen or consultancy. Furthermore, it sheds new insights in the kind of self-deception that occurs in anticipation of social deception opportunities: Do subjects deceive themselves about their own capabilities to be more successful 'salesmen' or about the quality of their 'product' in order to convince a third party? Interaction between matched and mixed gender groups allows additional insights for the gender literature -- should agents be matched with the client's gender to perform optimally?}
-\ \\ \ \\
-\cventry{}{Political Corruption}{}{}{}{While political corruption is often associated with autocratic and developing countries (Serra, 2006), the recent affairs surrounding then Korean president Park Gun-hye and François Fillon, the republican candidate to the French presidency in the 2017 election, remind us that corruption is also a problem in western and democratic societies. Is it possible that democratic institutions psychologically motivate corruption in elected politicians on an individual level? Banerjee (2016) shows that subjects engage in corruptive practices if they feel entitled to additional private gains. We show that acting socially and serving the public can trigger such a feeling of entitlement and hence create individual corruption.}
-
+% \cventry{}{The Foundations of the Decoy Effect: Putting Theory to the Test}{}{joint with Ernst Fehr and Remi Daviet (Wharton)}{}{Modern theories which explain the decoy effect make similar predictions with very heterogenous underlying processes. We propose a precise experimental design to disentangle those theories. The project contributes experimentally to the decoy and perception and attention literature and answers the question if salience theory can be microfounded through a divisive normalization neural process. Further insights pin down the area in which the compromise effect occurs in hope for a more precise definition of it.}
+% \ \\ \ \\\
+% \cventry{}{Dynamic Context Effects}{}{}{}{Modern theories consider decoy and context effects in a static setting. The menu of perceived alternatives provides a context for the choice situation at hand. For real decision makers the context of a decision is not history free as they are typically influenced by previous decisions and roads not taken.
+% In this project I develop a formal model of multi-attribute dynamic divisive normalization to tackle this phenomenon. In an experiment, I investigate the duration in which decoys can influence future decisions. This has strong influences for marketing practices and supplies extra incentives to firms to offer memorable and frequent rebate schemes.}
+% \ \\ \ \\
+% \cventry{}{Decoys Around the World}{}{joint with Christian Z\"und}{}{Are decoy effects a global phenomenon and do they interact with cultural norms? There is only limited research on decoy effects in the field and none in non-western countries. To fill this gap, we place Facebook advertisement for a fictitious product in various countries around the world. In our main treatment we place an advertisement featuring three items including a decoy. In a control, we place the same advertisement without a decoy being present.}
+% \ \\ \ \\
+% \cventry{}{Nudging with Decoys}{}{}{}{Decoys have been used by firms as a marketing device to motivate consumers to purchase more expensive products. This study is the first to investigates the usefulness of decoys as nuding devices employed to increase social welfare. As decoys influence choices without limiting the set of available options, they have the potential to be useful additions or alternatives to the classic menu of nudging devices like default options and framing, which has been successfully employed to increase retirement saving, tax payments, charitable giving, and the installation of housing insulation. This allows public agencies to improve the eficacy of welfare enhancing public policy.}
+% \ \\ \ \\
+% \cventry{}{Self-Deception and Deception}{}{}{}{I investigate Robert Trivers' social deception hypothesis. He claims that self-deception is a tool that evolved because it is instrumental in the efficient deception of others in social settings for material gain or status. I extend Schwardmann \& van der Weele's (ReStud R\&R) experimental setup to a three-party design. This allows to apply their findings to a broader set of client-agent settings like politicians running for office, salesmen or consultancy. Furthermore, it sheds new insights in the kind of self-deception that occurs in anticipation of social deception opportunities: Do subjects deceive themselves about their own capabilities to be more successful 'salesmen' or about the quality of their 'product' in order to convince a third party? Interaction between matched and mixed gender groups allows additional insights for the gender literature -- should agents be matched with the client's gender to perform optimally?}
+% \ \\ \ \\
+% \cventry{}{Political Corruption}{}{joint with Antonio Schiavone (U Warwick)}{}{While political corruption is often associated with autocratic and developing countries (Serra, 2006), the recent affairs surrounding then Korean president Park Gun-hye and Francois Fillon, the republican candidate to the French presidency in the 2017 election, remind us that corruption is also a problem in western and democratic societies. Is it possible that democratic institutions psychologically motivate elected politicians on an individual level to engage in corruption? Banerjee (2016) shows that feeling entitled to additional private gains is the main determinant to predict corruptive practices. We show that acting socially and serving the public can trigger such a feeling of entitlement and hence create corruption on the individual level in society as a whole.}
 
 \end{document}
