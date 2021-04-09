@@ -45,7 +45,7 @@ snakemake --cores all clean
 Clean LaTeX aux files and output PDFs:
 
 ```
-snakemake --cores all clean
+snakemake --cores all clean_all
 ```
 
 For `Make` build follow [danhje/latex-resume](https://github.com/danhje/latex-resume)
