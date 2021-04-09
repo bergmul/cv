@@ -8,7 +8,7 @@ Changes:
 
 - custom accent color (thanks to @kvalkanova)
 - adds `about` section
-- adds `entrysimple` environment which allows for entries in main column without description
+- adds `entrySimple` environment which allows for entries in main column without description
 - adds `contactPublic` environment  to allow for public and private versions which either omit or print address and phone number
 - cleans up file structure substantially
 - builds via `Make` or `Snakemake`
