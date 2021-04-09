@@ -10,7 +10,7 @@ CV is forked from [danhje/latex-resume](https://github.com/danhje/latex-resume) 
 
 Changes:
 
-- custom accent color (thanks to [@kvalkanova](https://github.com/kvalkanova)
+- custom accent color (thanks to [@kvalkanova](https://github.com/kvalkanova))
 - adds `about` section
 - adds `entrySimple` environment which allows for entries in main column without description
 - adds `contactPublic` environment  to allow for public and private versions which either omit or print address and phone number
