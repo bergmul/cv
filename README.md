@@ -4,6 +4,8 @@
 
 CV is forked from [danhje/latex-resume](https://github.com/danhje/latex-resume) and modified to my liking.
 
+![cv.jpg](My CV)
+
 Changes:
 
 - custom accent color (thanks to @kvalkanova)

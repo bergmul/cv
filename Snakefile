@@ -20,10 +20,13 @@ print(MODULES)
 # build rules
 #-------------------------------------------------------------------------------
 
-rule all:
+rule pdf_target:
   input:
-    cv     = "cv.pdf",
-    letter = "letter.pdf"
+    "cv.pdf"
+  output:
+    "cv.jpg"
+  shell:
+    "convert -density 600 {input} -quality 100 {output}"
 
 rule cv:
   input:
@@ -66,5 +69,6 @@ rule clean_all:
     out_dir
   shell:
     "fd -td -I {params} --exec rm -R && \
-     fd --extension pdf --exec rm"
+     fd --extension pdf --exec rm && \
+     fd --extension jpg --maxdepth=1 --exec rm"
 
