@@ -1,90 +1,52 @@
-## LaTeX Template for Cover Letter & Resume
+# My personal CV
 
-## Preview
+**Current Version:** 9/4/2021
 
-It's fairly easy to change color schemes, update the colors in `resume.tex` or
-`cover_letter.tex` files to suite your needs. It's also possible to create
-a colorscheme file and use `\input{resources/colors}` to share it between the
-tex files.
+CV is forked from [danhje/latex-resume](https://github.com/danhje/latex-resume) and modified to my liking.
 
-#### Resume
+Changes:
 
-| Default | One Dark |
-|:-------:|:--------:|
-| ![Resume](https://raw.githubusercontent.com/arubertoson/latex-resume/master/example/resources/default_resume.jpg) | ![Resume](https://raw.githubusercontent.com/arubertoson/latex-resume/master/example/resources/one_dark_resume.jpg) | 
+- custom accent color (thanks to @kvalkanova)
+- adds `about` section
+- allows for public and private versions which either omit or print address and phone number
+- cleans up file structure substantially
+- builds via `Make` or `Snakemake`
 
-#### Cover Letter
+## Requirements & Installation
 
-| Default | One Dark |
-|:-------:|:--------:|
-| ![Resume](https://raw.githubusercontent.com/arubertoson/latex-resume/master/example/resources/default_letter.jpg) | ![Resume](https://raw.githubusercontent.com/arubertoson/latex-resume/master/example/resources/one_dark_letter.jpg) | 
-
-## Installation
-
-```bash
-cd ~/texmf/tex/latex/local
-git clone https://github.com/arubertoson/latex-resume.git
-```
-
-#### Requirements
-
-* [TeXLive](https://www.tug.org/texlive)
-* [MiKTex](https://miktex.org/)
-
-From my understaning when using MiKTeX most packages will be fetched
-automatically when they are missing. TeXLive is a bit more complex if you are
-planning to use the lightweight variant. You will have to install the below
-packages and the Ubuntu font.
-
-I'm planning to reduce the dependencies in the future - the current list is
-unfortunatly a bit long:
-
-```bash
-tlmgr install \
-  texloc \
-  tikz \
-  pgf \
-  xcolor \
-  textpos \
-  tcolorbox \
-  environ \
-  trimspaces \
-  etoolbox \
-  enumitem \
-  parskip \
-  setspace \
-  titlecaps \
-  ifnextok \
-  noindentafter \
-  xargs \
-  xstring \
-  fancyvrb \
-  xkeyval \
-  zapfding \
-  fontspec \
-  pzdr \
-  fontawesome \
-  opensans \
-  paratype \
-  latexmk \
-```
+Requirements of [danhje/latex-resume](https://github.com/danhje/latex-resume) plus `Snakemake` and `fd` if chosen to compile via `Snakemake`.
 
 ## Usage
 
-To build the examples you will need the above dependencies installed, simply
-navigate to the example directory and run make. This will create both the
-example_resume.pdf and example_cover_letter.tex in a output directory.
+Build CV and cover letter:
 
 ```
-cd /path/to/latex-resume/examples
-make
-ls output
-example_resume.pdf example_cover_letter.pdf
+snakemake --cores all all
 ```
 
-To make modifications to the output resume use the provided modules.
+CV only:
 
-  * **examples/resources** contains information that is shared between both tex
-      files
-  * **examples/resume** contains modules to build the resume pdf
-  * **examples/cover_letter** contains modules to build the cover_letter pdf
+```
+snakemake --cores all cv
+```
+
+Letter only:
+
+```
+snakemake --cores all letter
+```
+
+Clean LaTeX aux files after build:
+
+```
+snakemake --cores all clean
+```
+
+Clean LaTeX aux files and output PDFs:
+
+```
+snakemake --cores all clean
+```
+
+For `Make` build follow [danhje/latex-resume](https://github.com/danhje/latex-resume)
+

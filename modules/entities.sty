@@ -52,6 +52,22 @@
   \vspace*{1em}
 }
 
+% CV entries without description
+\newcommand\entrysimple[4]{%
+  \begin{minipage}[t]{.3\textwidth}
+    \entrydatestyle{\StrSubstitute[0]{#4}{,}{\entrydatedelimiter}}
+
+    \entrylocationstyle{#3}
+  \end{minipage}%
+  \begin{minipage}[t]{.7\textwidth}
+    \entrypositionstyle{#1}
+
+    \entrycompanystyle{#2}\vspace{\entrydescriptionspace}
+
+  \end{minipage}
+  \vspace*{1em}
+}
+
 % Environment for bullet list containing cvitems
 \newenvironment{entrylist}
   {%

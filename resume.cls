@@ -7,7 +7,7 @@
 % Class license:
 % LPPL v1.3c (http://www.latex-project.org/lppl)
 
-\ProvidesClass{resume}[2018/07/14 Latex Resume Class]
+\ProvidesClass{resume}[2021/04/09 Latex Resume Class (@bergmul fork)]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -42,7 +42,7 @@
 \RequirePackage{xstring}
 
 \RequirePackage{graphicx}          % Stretch text
-%\RequirePackage{fontawesome}
+\RequirePackage{fontawesome}
 \RequirePackage{ifpdf}
 
 
@@ -51,6 +51,7 @@
 \RequirePackage{../modules/contact}
 \RequirePackage{../modules/links}
 \RequirePackage{../modules/references}
+\RequirePackage{../modules/about}
 \RequirePackage{../modules/entities}
 \RequirePackage{../modules/coverletter}
 
@@ -113,7 +114,7 @@
 % Need to add a offset to match the top margin, I lack the expertice to
 % solve this problem in a more elegant manner at the moment. But it seems to
 % be related to tikzpicture. TODO: Try adjustbox
-\pgfmathsetnewlength{\pushedtopmargin}{\headerbarsize-1.95em}
+\pgfmathsetnewlength{\pushedtopmargin}{\headerbarsize-2em}
 
 % Represents the offsets from the document bars.
 \pgfmathsetnewlength{\topmarginoffset}{3.25em}
@@ -138,9 +139,12 @@
 
 % Photo
 \newcommand{\photosize}{4.5cm}
-\newcommand{\photozoom}{5.0cm}
+\newcommand{\photozoom}{6cm}
+\newcommand{\photoxoffset}{0.2cm}
+\newcommand{\photoyoffset}{-0.15cm}
 \newcommand{\photoedgesize}{0.5mm}
 \newcommand{\photouteredge}{0.5cm}
+
 % Automatically determine top margin and offset to match header.
 \pgfmathsetnewlength{\photoverticaloffset}{%
   \photosize/2 + \headerbarsize+\topmarginoffset%
@@ -373,7 +377,7 @@
       circle,
       minimum size=\photosize,
       path picture={%
-        \node[] at ([yshift=-0.5cm, xshift=-.1cm] path picture bounding box.center){%
+        \node[] at ([yshift=\photoyoffset, xshift=\photoxoffset] path picture bounding box.center){%
           \includegraphics[width=\photozoom]{\@photo}%
         };
       }] at (image.center){};
@@ -418,10 +422,19 @@
       % Using csname to expand the call to a module command we can utelize
       % the command pattern principle and have each module contain a draw macro
       % to control the drawing.
-      \begin{section}[\each][#2]
-        \csname draw@\each\endcsname%
-      \end{section}%
-      \vspace{\sectionspacing}%
+      \ifthenelse{\equal{\each}{publicContact}}
+        {%
+          \begin{section}[Contact][#2]
+            \csname draw@\each\endcsname%
+          \end{section}%
+          \vspace{\sectionspacing}%
+        }
+        {%
+          \begin{section}[\each][#2]
+            \csname draw@\each\endcsname%
+          \end{section}%
+          \vspace{\sectionspacing}%
+        }
     }
 }
 

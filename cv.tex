@@ -1,0 +1,50 @@
+%-------------------------------------------------------------------------------
+% my personal cv
+% author: Ulrich Bergmann (@bergmul)
+% forked from danhje/latex-resume
+%-------------------------------------------------------------------------------
+
+\documentclass[a4paper]{resume}
+
+%-------------------------------------------------------------------------------
+% custom color
+%-------------------------------------------------------------------------------
+
+% light blue accent color (by @kvalkanova)
+\definecolor{accents}{HTML}{c3d2e4}
+
+% Atom Dark One
+% \definecolor{bg}{HTML}{282c34}
+% \definecolor{bg-d}{HTML}{50555e}
+% \definecolor{fg}{HTML}{ffffff}
+% \definecolor{fg-d}{HTML}{fafafa}
+% \definecolor{accents}{HTML}{51afef}
+
+%-------------------------------------------------------------------------------
+% content
+%-------------------------------------------------------------------------------
+
+% load sidebar content
+\input{resources/publicContact}
+\input{resources/sidebar}
+
+% define sidebar entries for build
+\sidebarentries{%
+  publicContact,
+  about,
+  skills%
+}
+
+% define main entries for build
+\documententries{%
+  resources/experience,
+  resources/education%
+}
+
+%-------------------------------------------------------------------------------
+% build
+%-------------------------------------------------------------------------------
+
+\begin{document}
+  \populatedocument%
+\end{document}

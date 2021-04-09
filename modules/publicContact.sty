@@ -3,7 +3,7 @@
 %-------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{modules/contact}
+\ProvidesPackage{modules/publicContact}
 
 \newcommand*{\name}[2]{\def\@firstname{#1} \def\@lastname{#2}}
 \newcommand*{\birth}[1]{\def\@birth{#1}}
@@ -21,32 +21,12 @@
   \sidebarcontentstyle{#2}\\[\contactgroupspacing]
 }
 
-\newcommand{\contactentry}[1]{%
-  \sidebarcontentstyle{#1}\\[\contactgroupspacing]
-}
-
 % TODO: Create for loop and make it optional
-\newcommand{\draw@contact}{%
-  \begin{flushleft}
-    \contactgroup{address}{\@address}
-    \contactgroup{phone}{\@phone}
-    \contactgroup{email}{\@email}
-    \contactgroup{web}{\@github \\ \@linkedin \\ \@cv}
-    \contactgroup{citizenship}{\@citizenship}
-    % \ifstrempty{\gethomepage}
-    %   {}
-    %   {\contactgroup{web}{\gethomepage}}
-  \end{flushleft}
-}
-
-\newcommand{\draw@publicContact}{%
+\newcommand{\draw@Contact}{%
   \begin{flushleft}
     \contactgroup{email}{\@email}
     \contactgroup{web}{\@github \\ \@linkedin \\ \@cv}
     \contactgroup{citizenship}{\@citizenship}
-    % \ifstrempty{\gethomepage}
-    %   {}
-    %   {\contactgroup{web}{\gethomepage}}
   \end{flushleft}
 }
 
