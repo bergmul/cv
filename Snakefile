@@ -20,7 +20,7 @@ print(MODULES)
 # build rules
 #-------------------------------------------------------------------------------
 
-rule pdf_target:
+rule cv_target:
   input:
     "cv.pdf"
   output:
