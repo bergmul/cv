@@ -2,9 +2,11 @@
 
 **Current Version:** 9/4/2021
 
-CV is forked from [danhje/latex-resume](https://github.com/danhje/latex-resume) and modified to my liking.
+![My CV](cv.jpg)
 
-![cv.jpg](My CV)
+## Changelog
+
+CV is forked from [danhje/latex-resume](https://github.com/danhje/latex-resume) and modified to my liking.
 
 Changes:
 
