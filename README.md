@@ -16,10 +16,11 @@ Changes:
 - adds `contactPublic` environment  to allow for public and private versions which either omit or print address and phone number
 - cleans up file structure substantially
 - builds via `Make` or `Snakemake`
+- Snakemake rule `cv_target` converts PDF to JPG to include as screenshot in README (requires imagekick)
 
 ## Requirements & Installation
 
-Requirements of [danhje/latex-resume](https://github.com/danhje/latex-resume) plus `Snakemake` and `fd` if chosen to compile via `Snakemake`.
+Requirements of [danhje/latex-resume](https://github.com/danhje/latex-resume) plus `Snakemake` and `fd` if chosen to compile via `Snakemake`. `Imagekick` is required to convert PDF to JPG.
 
 ## Usage
 
