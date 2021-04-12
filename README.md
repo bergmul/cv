@@ -1,6 +1,6 @@
 # My personal CV
 
-**Current Version:** 9/4/2021
+**Current Version:** 12/4/2021
 
 ![My CV](cv.jpg)
 
@@ -24,10 +24,10 @@ Requirements of [danhje/latex-resume](https://github.com/danhje/latex-resume) pl
 
 ## Usage
 
-Build CV and cover letter:
+Build CV and generate JPG for README
 
 ```
-snakemake --cores all all
+snakemake --cores all
 ```
 
 CV only:
@@ -48,7 +48,7 @@ Clean LaTeX aux files after build:
 snakemake --cores all clean
 ```
 
-Clean LaTeX aux files and output PDFs:
+Clean LaTeX aux files and outputs:
 
 ```
 snakemake --cores all clean_all
