@@ -32,7 +32,8 @@ rule cv:
   input:
     main      = "cv.tex",
     resources = expand("resources/{iResource}", iResource = RESOURCES),
-    modules   = expand("modules/{iModule}", iModule = MODULES)
+    modules   = expand("modules/{iModule}", iModule = MODULES),
+    style     = "resume.cls"
   output:
     "cv.pdf"
   params:
