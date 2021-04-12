@@ -138,16 +138,16 @@
 \newcommand{\lastnamefontsize}{30pt}
 
 % Photo
-\newcommand{\photosize}{4.5cm}
-\newcommand{\photozoom}{6cm}
-\newcommand{\photoxoffset}{0.2cm}
-\newcommand{\photoyoffset}{-0.15cm}
+\newcommand{\photosize}{4cm}
+\newcommand{\photozoom}{4.5cm}
+\newcommand{\photoxoffset}{0cm}
+\newcommand{\photoyoffset}{0cm}
 \newcommand{\photoedgesize}{0.5mm}
 \newcommand{\photouteredge}{0.5cm}
 
 % Automatically determine top margin and offset to match header.
 \pgfmathsetnewlength{\photoverticaloffset}{%
-  \photosize/2 + \headerbarsize+\topmarginoffset%
+  \photosize/2 + \headerbarsize+\topmarginoffset + 0.5cm%
 }%
 \pgfmathsetnewlength{\headerverticaloffset}{%
   \photosize- (\firstnamefontsize+\lastnamefontsize)
