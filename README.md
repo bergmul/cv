@@ -1,6 +1,6 @@
 # My personal CV
 
-**Current Version:** 9/4/2021
+**Current Version:** May 3rd 2021
 
 ![My CV](cv.jpg)
 
@@ -10,11 +10,12 @@ CV is forked from [danhje/latex-resume](https://github.com/danhje/latex-resume) 
 
 Changes:
 
-- custom accent color (thanks to @kvalkanova)
+- custom accent color (thanks to [@kvalkanova](https://github.com/kvalkanova))
 - adds `about` section
 - adds `entrySimple` environment which allows for entries in main column without description
 - adds `contactPublic` environment  to allow for public and private versions which either omit or print address and phone number
 - cleans up file structure substantially
+- fixes some inconsistencies in module referencing
 - builds via `Make` or `Snakemake`
 - Snakemake rule `cv_target` converts PDF to JPG to include as screenshot in README (requires imagekick)
 
@@ -24,10 +25,10 @@ Requirements of [danhje/latex-resume](https://github.com/danhje/latex-resume) pl
 
 ## Usage
 
-Build CV and cover letter:
+Build CV and generate JPG for README
 
 ```
-snakemake --cores all all
+snakemake --cores all
 ```
 
 CV only:
@@ -48,7 +49,7 @@ Clean LaTeX aux files after build:
 snakemake --cores all clean
 ```
 
-Clean LaTeX aux files and output PDFs:
+Clean LaTeX aux files and outputs:
 
 ```
 snakemake --cores all clean_all
