@@ -2,20 +2,21 @@
 \ProvidesPackage{modules/references}
 
 \newcommand*{\references}[1]{\def\@references{#1}}
-
+\newcommand{\refgroupspacing}{0.5em}
+\newcommand{\refentryspacing}{0.2em}
 \newcommand{\draw@references}{%
   \begin{flushleft}
-    \foreach[] \name/\pos/\phone/\email in \@references
+    \foreach[] \name/\pos/\phone/\email/\web in \@references
     {%
-      \sidebarheaderstyle{\name}\\
-      \sidebarcontentstyle{\pos}\\[.25em]
+      \sidebarheaderstyle{\name}\\[\refentryspacing]
+      \sidebarcontentstyle{\pos}\\[\refentryspacing]
 
-      \ifdefempty{\phone}
-        {}
-        {\sidebarheaderstyle{Phone: }\sidebarcontentstyle{\phone}\\}
-
-      \sidebarheaderstyle{Email: }\sidebarcontentstyle{\email}
-      \\[1.25em]
+      \sidebarheaderstyle{Phone:}  \\[\refentryspacing] \sidebarcontentstyle{\phone} \\[\refgroupspacing]
+      \sidebarheaderstyle{Email:}  \\[\refentryspacing] \sidebarcontentstyle{\email}
+      \ifdefempty{\web}
+      {}
+      {\\[\refgroupspacing] \sidebarheaderstyle{Web:}  \\[\refentryspacing] \sidebarcontentstyle{\web}}
+      \\[2em]
     }
   \end{flushleft}
 }

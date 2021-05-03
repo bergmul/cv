@@ -42,7 +42,7 @@
 \RequirePackage{xstring}
 
 \RequirePackage{graphicx}          % Stretch text
-\RequirePackage{fontawesome}
+\usepackage{fontawesome5}
 \RequirePackage{ifpdf}
 
 
