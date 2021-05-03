@@ -1,6 +1,6 @@
 # My personal CV
 
-**Current Version:** 12/4/2021
+**Current Version:** May 3rd 2021
 
 ![My CV](cv.jpg)
 
@@ -15,6 +15,7 @@ Changes:
 - adds `entrySimple` environment which allows for entries in main column without description
 - adds `contactPublic` environment  to allow for public and private versions which either omit or print address and phone number
 - cleans up file structure substantially
+- fixes some inconsistencies in module referencing
 - builds via `Make` or `Snakemake`
 - Snakemake rule `cv_target` converts PDF to JPG to include as screenshot in README (requires imagekick)
 
