@@ -3,7 +3,7 @@
 %-------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{modules/contact}
+\ProvidesPackage{../modules/contact}
 
 \newcommand*{\name}[2]{\def\@firstname{#1} \def\@lastname{#2}}
 \newcommand*{\birth}[1]{\def\@birth{#1}}
@@ -11,13 +11,19 @@
 \newcommand*{\phone}[1]{\def\@phone{#1}}
 \newcommand*{\email}[1]{\def\@email{#1}}
 \newcommand*{\address}[1]{\def\@address{#1}}
-\newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
-\newcommand*{\github}[1]{\def\@github{#1}}
-\newcommand*{\cv}[1]{\def\@cv{#1}}
 
-\newcommand{\contactgroupspacing}{0.3em}
+% \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
+% \newcommand*{\github}[1]{\def\@github{#1}}
+% \newcommand*{\cv}[1]{\def\@cv{#1}}
+
+\newcommand*{\web}[1]{\def\@web{#1}}
+
+
+\newcommand{\contactgroupspacing}{0.5em}
+\newcommand{\contactentryspacing}{0.2em}
+
 \newcommand{\contactgroup}[2]{%
-  \sidebarheaderstyle{#1}\\
+  \sidebarheaderstyle{#1}\\[\contactentryspacing]
   \sidebarcontentstyle{#2}\\[\contactgroupspacing]
 }
 
@@ -31,7 +37,7 @@
     \contactgroup{address}{\@address}
     \contactgroup{phone}{\@phone}
     \contactgroup{email}{\@email}
-    \contactgroup{web}{\@github \\ \@linkedin \\ \@cv}
+    \contactgroup{web}{\@web}
     \contactgroup{citizenship}{\@citizenship}
     % \ifstrempty{\gethomepage}
     %   {}
@@ -42,7 +48,7 @@
 \newcommand{\draw@publicContact}{%
   \begin{flushleft}
     \contactgroup{email}{\@email}
-    \contactgroup{web}{\@github \\ \@linkedin \\ \@cv}
+    \contactgroup{web}{\@web}
     \contactgroup{citizenship}{\@citizenship}
     % \ifstrempty{\gethomepage}
     %   {}
