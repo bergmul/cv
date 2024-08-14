@@ -2,7 +2,8 @@
 
 **Current Version:** August 14th 2024
 
-![My CV](cv.jpg)
+![My CV](cv-0.jpg)
+![My CV](cv-1.jpg)
 
 ## Changelog
 
