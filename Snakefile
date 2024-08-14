@@ -24,9 +24,12 @@ rule cv_target:
   input:
     "cv.pdf"
   output:
+    page1 = "cv-0.jpg",
+    page2 = "cv-1.jpg"
+  params:
     "cv.jpg"
   shell:
-    "convert -density 600 {input} -quality 100 {output}"
+    "convert -density 600 {input} -quality 100 {params}"
 
 rule cv:
   input:
@@ -70,6 +73,6 @@ rule clean_all:
     out_dir
   shell:
     "fd -td -I {params} --exec rm -R && \
-     fd --extension pdf --exec rm && \
+     fd --extension pdf --maxdepth=1 --exec rm && \
      fd --extension jpg --maxdepth=1 --exec rm"
 
