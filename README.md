@@ -1,6 +1,6 @@
 # My personal CV
 
-**Current Version:** April 18th 2023
+**Current Version:** August 14th 2024
 
 ![My CV](cv.jpg)
 

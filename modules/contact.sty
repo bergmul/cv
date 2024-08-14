@@ -34,8 +34,6 @@
 % TODO: Create for loop and make it optional
 \newcommand{\draw@contact}{%
   \begin{flushleft}
-    \contactgroup{address}{\@address}
-    \contactgroup{phone}{\@phone}
     \contactgroup{email}{\@email}
     \contactgroup{web}{\@web}
     \contactgroup{citizenship}{\@citizenship}
@@ -45,15 +43,6 @@
   \end{flushleft}
 }
 
-\newcommand{\draw@publicContact}{%
-  \begin{flushleft}
-    \contactgroup{email}{\@email}
-    \contactgroup{web}{\@web}
-    \contactgroup{citizenship}{\@citizenship}
-    % \ifstrempty{\gethomepage}
-    %   {}
-    %   {\contactgroup{web}{\gethomepage}}
-  \end{flushleft}
-}
+
 
 \endinput

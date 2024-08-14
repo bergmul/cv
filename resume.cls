@@ -315,7 +315,7 @@
     \sidebarcontentstyle{%
       \setstretch{1.1}
       \@firstname\space\@lastname\\
-      \@phone\\ \@email\\ \@address%
+      \@email%
     }
   \end{textblock}
 }
